@@ -17,4 +17,10 @@ public class AdminDao {
         List list = jdbcDao.getObjectList(sSelectQuery, new Object[]{}, Admin.class);
         return list;
     }
+    @SuppressWarnings("unchecked")
+    public Admin getOneAdmin(Admin admin) {
+        String sSelectQuery = "SELECT admin_id, admin_username, admin_password FROM admin where admin_username = ? and admin_password  = ?";
+        Admin a = (Admin) jdbcDao.getObject(sSelectQuery, new Object[]{admin.getAdmin_username(), admin.getAdmin_password()}, Admin.class);
+        return a;
+    }
 }

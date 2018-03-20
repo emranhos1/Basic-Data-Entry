@@ -46,6 +46,17 @@ public class JdbcDao {
         return total;
     }
 
+    //------------------------get one row-------------------------
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    public Object getObject(String sql, Object[] params, Class clazz) {
+        Object object = null;
+        try {
+            object = getJdbcTemplate().queryForObject(sql, params, new BeanPropertyRowMapper(clazz));
+        } catch (Exception e) {
+            System.out.println("JdbcDao-----> getObject---> " + e);
+        }
+        return object;
+    }
     //------------------------get table data-------------------------
 
     @SuppressWarnings({"rawtypes", "unchecked"})
@@ -54,7 +65,7 @@ public class JdbcDao {
         try {
             list = getJdbcTemplate().query(sql, params, new BeanPropertyRowMapper(clazz));
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("JdbcDao-----> getObjectList---> " + e);
         }
         return list;
     }
