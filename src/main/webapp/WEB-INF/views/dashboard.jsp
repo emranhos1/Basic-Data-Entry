@@ -27,20 +27,20 @@
                         <table class="table table-striped table-dark">
                             <thead>
                             <h4 class="text-center">Rent E Car</h4>
-                                <tr>
-                                    <th scope="col">SL</th>
-                                    <th scope="col">First Name</th>
-                                    <th scope="col">Last Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Mobile No</th>
-                                    <th scope="col">NID No</th>
-                                    <th scope="col">Business Name</th>
-                                    <th scope="col">Tin No</th>
-                                    <th scope="col">Trad Licence</th>
-                                </tr>
+                            <tr>
+                                <th scope="col">SL</th>
+                                <th scope="col">First Name</th>
+                                <th scope="col">Last Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Mobile No</th>
+                                <th scope="col">NID No</th>
+                                <th scope="col">Business Name</th>
+                                <th scope="col">Tin No</th>
+                                <th scope="col">Trad Licence</th>
+                            </tr>
                             </thead>
                             <tbody id="allRentECar">
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -50,6 +50,19 @@
             </div>
         </div>
     </body>
+<!--    <script>
+
+        $(window).on("load", function () {
+            $.ajax({
+                type: "POST",
+                url: "../AllShopingMallServlet",
+                success: function (data) {
+                    $("#allRentECar").show();
+                    $("#allRentECar").append(data);
+                }
+            });
+        });
+    </script>-->
 
     <!--    <script type="text/javascript">
             $(document).ready(function () {

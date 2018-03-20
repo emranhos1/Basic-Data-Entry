@@ -1,7 +1,9 @@
 package com.jinanit.basicdataentry.controller;
 
 import com.jinanit.basicdataentry.dao.AdminDao;
+import com.jinanit.basicdataentry.dao.RentECarDao;
 import com.jinanit.basicdataentry.model.Admin;
+import com.jinanit.basicdataentry.model.RentECar;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,8 @@ public class AdminController {
 
     @Autowired
     AdminDao adminDao;
+    @Autowired
+    RentECarDao rentECarDao;
 
     @RequestMapping(value = {"/adminLogin"}, method = RequestMethod.GET)
     public String login(ModelMap model) {
@@ -34,4 +38,10 @@ public class AdminController {
         }
     }
 
+    @RequestMapping(value = "/AllRentECar", method = RequestMethod.POST)
+    public RentECar AllRentECar(HttpServletRequest request, ModelMap model, @ModelAttribute("admin") RentECar rentECar) {
+        RentECar REC = (RentECar) rentECarDao.getRentECar();
+        
+            return REC;
+    }
 }
