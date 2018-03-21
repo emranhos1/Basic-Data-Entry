@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Istiaque && Emran
+ */
 package com.jinanit.basicdataentry.model;
 
 public class Outlet {
@@ -14,6 +18,8 @@ public class Outlet {
     private String trade_licence_photo;
     private String tin_no;
     private String password;
+    private String entry_on;
+    private String update_on;
 
     public Integer getOutlet_id() {
         return outlet_id;
@@ -117,6 +123,22 @@ public class Outlet {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEntry_on() {
+        return entry_on;
+    }
+
+    public void setEntry_on(String entry_on) {
+        this.entry_on = entry_on;
+    }
+
+    public String getUpdate_on() {
+        return update_on;
+    }
+
+    public void setUpdate_on(String update_on) {
+        this.update_on = update_on;
     }
     
 }

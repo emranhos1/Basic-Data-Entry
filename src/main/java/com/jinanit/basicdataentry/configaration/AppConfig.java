@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 /**
  *
- * @author Dell
+ * @author Istiaque && Emran
  */
 @Configuration
 @EnableWebMvc

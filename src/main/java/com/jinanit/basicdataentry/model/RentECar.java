@@ -7,7 +7,7 @@ package com.jinanit.basicdataentry.model;
 
 /**
  *
- * @author Dell
+ * @author Istiaque && Emran
  */
 public class RentECar {
 
@@ -18,9 +18,20 @@ public class RentECar {
     private String mobile_no;
     private String nid_no;
     private String business_name;
+    private String business_address;
     private String tin_no;
     private String trad_licence;
     private String password;
+    private String entry_on;
+    private String update_on;
+
+    public String getBusiness_address() {
+        return business_address;
+    }
+
+    public void setBusiness_address(String business_address) {
+        this.business_address = business_address;
+    }
 
     public Integer getRent_e_car_id() {
         return rent_e_car_id;
@@ -101,4 +112,21 @@ public class RentECar {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getEntry_on() {
+        return entry_on;
+    }
+
+    public void setEntry_on(String entry_on) {
+        this.entry_on = entry_on;
+    }
+
+    public String getUpdate_on() {
+        return update_on;
+    }
+
+    public void setUpdate_on(String update_on) {
+        this.update_on = update_on;
+    }
+    
 }

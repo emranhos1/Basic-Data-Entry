@@ -1,9 +1,12 @@
+/**
+ *
+ * @author Istiaque && Emran
+ */
 package com.jinanit.basicdataentry.controller;
 
 import com.jinanit.basicdataentry.dao.AdminDao;
 import com.jinanit.basicdataentry.dao.RentECarDao;
 import com.jinanit.basicdataentry.model.Admin;
-import com.jinanit.basicdataentry.model.RentECar;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,16 +35,9 @@ public class AdminController {
     public String AdminLoginForm(HttpServletRequest request, ModelMap model, @ModelAttribute("admin") Admin admin) {
         Admin a = adminDao.getOneAdmin(admin);
         if (a != null) {
-            return "dashboard";
+            return "redirect:/dashboard/dashboard";
         } else {
             return "redirect:/adminLogin";
         }
-    }
-
-    @RequestMapping(value = "/AllRentECar", method = RequestMethod.POST)
-    public RentECar AllRentECar(HttpServletRequest request, ModelMap model, @ModelAttribute("admin") RentECar rentECar) {
-        RentECar REC = (RentECar) rentECarDao.getRentECar();
-        
-            return REC;
     }
 }

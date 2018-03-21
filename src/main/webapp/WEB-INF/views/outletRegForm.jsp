@@ -1,7 +1,7 @@
 <%-- 
     Document   : outletRegForm
     Created on : Mar 17, 2018, 3:08:20 PM
-    Author     : Dell
+    Author     : Istiaque && Emran
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -92,8 +92,8 @@
                                             <div class="col-md-6 pr-1">
                                                 <div class="form-group">
                                                     <label>Business Category</label>
-                                                    <form:select type="text" path="business_category_id" class="form-control" placeholder="Business name">
-                                                        <form:option value="1">Select One</form:option>
+                                                    <form:select type="text" path="business_category_id" class="form-control">
+                                                        <form:options items="${catObj}" itemValue="id" itemLabel="cat_name"/>
                                                     </form:select>
                                                 </div>
                                             </div>

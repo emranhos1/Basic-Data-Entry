@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Istiaque && Emran
+ */
 package com.jinanit.basicdataentry.model;
 
 public class Admin {

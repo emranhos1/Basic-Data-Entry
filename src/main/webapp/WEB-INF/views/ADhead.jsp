@@ -1,7 +1,7 @@
 <%-- 
-    Document   : head
+    Document   : ADhead
     Created on : Mar 20, 2018, 11:47:10 AM
-    Author     : PLAYBOY
+    Author     : Istiaque && Emran
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -63,3 +63,4 @@
     <script src="<%=request.getContextPath()%>/static/js/light-bootstrap-dashboard.js" type="text/javascript"></script>
     <!-- Light Dashboard DEMO methods, don't include it in your project! -->
     <script src="<%=request.getContextPath()%>/static/js/demo.js" type="text/javascript"></script>
+    <script src="<%=request.getContextPath()%>/static/js/jquery.table2excel.js" type="text/javascript"></script>

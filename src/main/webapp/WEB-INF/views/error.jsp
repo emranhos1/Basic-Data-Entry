@@ -1,7 +1,7 @@
 <%-- 
     Document   : sucess
     Created on : Mar 17, 2018, 5:16:28 PM
-    Author     : Dell
+    Author     : Istiaque && Emran
 --%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
@@ -84,4 +84,3 @@
         });
     </script>
 </html>
-

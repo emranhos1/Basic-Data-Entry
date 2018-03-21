@@ -1,9 +1,8 @@
 <%-- 
     Document   : sucess
     Created on : Mar 17, 2018, 5:16:28 PM
-    Author     : Dell
+    Author     : Istiaque && Emran
 --%>
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -49,7 +48,6 @@
                                                 <button  class="btn btn-google btn-wd w-100 btn-lg border-0 rounded-0">Outlet</button>
                                             </form>
                                         </div>
-                                        <!--<button  class="btn btn-google btn-wd w-100 btn-lg border-0 rounded-0" onclick="">try it</button>-->
                                     </div>
                                 </div>
                             </div><!--
@@ -83,7 +81,6 @@
 //            $('.card').removeClass('card-hidden');
             window.location = "<%=request.getContextPath()%>/home";
         });
-        
     </script>
 </html>
 

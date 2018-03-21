@@ -9,7 +9,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 /**
  *
- * @author Dell
+ * @author Istiaque && Emran
  */
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

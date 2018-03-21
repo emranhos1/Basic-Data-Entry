@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : ADhead
+    Created on : Mar 20, 2018, 11:47:10 AM
+    Author     : Istiaque && Emran
+--%>
 <!--side bar-->
 <div class="sidebar" data-color="orange" data-image="http://demos.creative-tim.com/light-bootstrap-dashboard-pro/assets/img/sidebar-5.jpg">
     <!--
@@ -51,16 +55,28 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <ul class="nav">
             <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<%=request.getContextPath()%>/dashboard/dashboard">
                     <i class="nc-icon nc-chart-pie-35"></i>
                     <p>Dashboard</p>
+<!--                    <form method="post" action="<%=request.getContextPath()%>/AdminLoginForm">
+                        <input type="submit" value="Dashboard" class="link"/>
+                    </form>-->
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#componentsExamples">
+                <a class="nav-link" href="<%=request.getContextPath()%>/rentecar/rentecar">
                     <i class="nc-icon nc-app"></i>
                     <p>
-                        Components
+                        Rent-e-Car
+                        <!--<b class="caret"></b>-->
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<%=request.getContextPath()%>/outlet/outlet">
+                    <i class="nc-icon nc-app"></i>
+                    <p>
+                        Outleet
                         <!--<b class="caret"></b>-->
                     </p>
                 </a>

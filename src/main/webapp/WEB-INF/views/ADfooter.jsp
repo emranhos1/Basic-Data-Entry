@@ -1,3 +1,8 @@
+<%-- 
+    Document   : ADfooter
+    Created on : Mar 21, 2018, 12:26:06 AM
+    Author     : Istiaque && Emran
+--%>
 <!--footer-->
 <footer class="footer">
     <div class="container">

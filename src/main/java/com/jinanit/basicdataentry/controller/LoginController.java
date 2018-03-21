@@ -5,6 +5,7 @@
  */
 package com.jinanit.basicdataentry.controller;
 
+import com.jinanit.basicdataentry.dao.CategoryDao;
 import com.jinanit.basicdataentry.dao.OutletDao;
 import com.jinanit.basicdataentry.dao.RentECarDao;
 import com.jinanit.basicdataentry.model.Outlet;
@@ -17,10 +18,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 /**
  *
- * @author Dell
+ * @author Istiaque && Emran
  */
 @Controller
 @RequestMapping("/")
@@ -30,6 +30,8 @@ public class LoginController {
     RentECarDao rentECarDao;
     @Autowired
     OutletDao outletDao;
+    @Autowired
+    CategoryDao categoryDao;
 
     @RequestMapping(value = {"/", "home"}, method = RequestMethod.GET)
     public String login(ModelMap model) {
@@ -47,6 +49,7 @@ public class LoginController {
     public String outletReg(ModelMap model) {
         model.put("pathAction", "OutletRegForm");
         model.addAttribute("outlet", new Outlet());
+        model.addAttribute("catObj", categoryDao.getCategory());
         return "outletRegForm";
     }
 

@@ -1,7 +1,7 @@
 <%-- 
     Document   : rentCarReg
     Created on : Mar 17, 2018, 2:49:24 PM
-    Author     : Dell
+    Author     : Istiaque && Emran
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package com.jinanit.basicdataentry.model;
-
 /**
  *
- * @author User
+ * @author Istiaque && Emran
  */
 public class Category {
     private Integer id;

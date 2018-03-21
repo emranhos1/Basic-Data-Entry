@@ -1,3 +1,7 @@
+/**
+ *
+ * @author Istiaque && Emran
+ */
 package com.jinanit.basicdataentry.dao;
 
 import com.jinanit.basicdataentry.model.Admin;
