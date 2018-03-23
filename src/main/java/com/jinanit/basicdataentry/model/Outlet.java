@@ -4,7 +4,10 @@
  */
 package com.jinanit.basicdataentry.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Outlet {
+    
     private Integer outlet_id;
     private String first_name;
     private String last_name;
@@ -20,6 +23,15 @@ public class Outlet {
     private String password;
     private String entry_on;
     private String update_on;
+    private MultipartFile file;
+
+    public MultipartFile getFile() {
+        return file;
+    }
+
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
 
     public Integer getOutlet_id() {
         return outlet_id;

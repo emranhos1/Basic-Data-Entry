@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-md-auto col-sm-auto"id="cont" >
                         <!--<div class="card card-login card-hidden">-->
-                        <form:form class="form" method="POST" modelAttribute="outlet" action="${pathAction}" role="form" >
+                        <form:form class="form" method="POST" modelAttribute="outlet"  enctype="multipart/form-data" action="${pathAction}" role="form" >
                             <div class="card">
                                 <div class="card-header ">
                                     <div class="card-header text-center">
@@ -116,7 +116,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label>Trad license Photo</label>
-                                                    <form:input type="file" path="trade_licence_photo" class="form-control" placeholder="Trad licence"/>
+                                                    <form:input type="file" path="file" accept="image/*" class="form-control" placeholder="Trad licence"/>
                                                 </div>
                                             </div>
                                         </div>

@@ -10,6 +10,7 @@ import com.jinanit.basicdataentry.dao.OutletDao;
 import com.jinanit.basicdataentry.dao.RentECarDao;
 import com.jinanit.basicdataentry.model.Outlet;
 import com.jinanit.basicdataentry.model.RentECar;
+import com.jinanit.basicdataentry.util.FileUpload;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 /**
  *
@@ -32,6 +34,8 @@ public class LoginController {
     OutletDao outletDao;
     @Autowired
     CategoryDao categoryDao;
+    @Autowired
+    FileUpload fileUpload;
 
     @RequestMapping(value = {"/", "home"}, method = RequestMethod.GET)
     public String login(ModelMap model) {
@@ -54,7 +58,10 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/OutletRegForm", method = RequestMethod.POST)
-    public String OutletRegForm(HttpServletRequest request, ModelMap model, @ModelAttribute("outlet") Outlet outlet, RedirectAttributes redirectAttributes) {
+    public String OutletRegForm(HttpServletRequest request, ModelMap model, @ModelAttribute("outlet") Outlet outlet) {
+        MultipartFile multipartFile = outlet.getFile();
+        String fileName = fileUpload.fileSave(request, multipartFile);
+        outlet.setTrade_licence_photo(fileName);
         int i = outletDao.saveOutlet(outlet);
         System.out.println(i);
         if (i > 0) {
